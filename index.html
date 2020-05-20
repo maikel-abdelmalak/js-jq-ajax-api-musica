@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CD-Musica</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
+        <script src="main.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="img/logo.png" alt="logo" />
+                <div class="selection">
+                    <p>SELEZIONA GENERE:</p>
+                    <select class="genere" name="">
+                        <option value="">Rock</option>
+                        <option value="">Pop</option>
+                        <option value="">Metal</option>
+                        <option value="">Jazz</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="cds-container container">
+
+        </div>
+
+    <script id="music-template" type="text/x-handlebars-template">
+        <div class="cd">
+            <img src="{{immagine}}" alt="">
+            <h3>{{titolo}}</h3>
+            <span class="author">{{autore}}</span>
+            <span class="year">{{anno}}</span>
+        </div>
+    </script>
+    <script id="errore-template" type="text/x-handlebars-template">
+        <div class="errore">
+            <h2>ops! errore {{numeroErrore}} {{tipoErrore}}</h2>
+        </div>
+    </script>
+
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
