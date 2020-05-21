@@ -15,10 +15,11 @@
                 <div class="selection">
                     <p>SELEZIONA GENERE:</p>
                     <select class="genere" name="">
-                        <option value="">Rock</option>
-                        <option value="">Pop</option>
-                        <option value="">Metal</option>
-                        <option value="">Jazz</option>
+                        <option value="All" >All</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Jazz">Jazz</option>
                     </select>
                 </div>
             </div>
@@ -34,6 +35,8 @@
             <h3>{{titolo}}</h3>
             <span class="author">{{autore}}</span>
             <span class="year">{{anno}}</span>
+            <span class="genre">{{genere}}</span>
+
         </div>
     </script>
     <script id="errore-template" type="text/x-handlebars-template">
@@ -42,6 +45,5 @@
         </div>
     </script>
 
-        <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

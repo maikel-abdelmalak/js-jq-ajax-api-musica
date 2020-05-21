@@ -10,7 +10,7 @@ $(document).ready(function(){
             cd[i]
             var source   = $('#music-template').html()
             var template = Handlebars.compile(source);
-            var context = {immagine: cd[i].poster, titolo: cd[i].title, autore:cd[i].author, anno:cd[i].year}
+            var context = {immagine: cd[i].poster, titolo: cd[i].title, autore:cd[i].author, anno:cd[i].year, genere:cd[i].genre}
             var html = template(context);
             $('.cds-container').append(html);
         }
@@ -24,7 +24,25 @@ $(document).ready(function(){
             $('.cds-container').append(html);
         }
     })
-    
+
+    $('select').change(function(val){
+        $('.cd').show()
+        var scelta = $('.genere').val()
+        console.log(scelta);
+        if(scelta != 'All'){
+            $('.cd').each(function(){
+                var valore = $(this).find('.genre').text()
+                if(valore != scelta){
+                    $(this).hide()
+                }
+            })
+        }
+
+
+
+
+
+})
 
 
 
